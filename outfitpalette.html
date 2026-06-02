@@ -577,7 +577,6 @@ footer {
     <div class="state-empty" id="st-empty">
       <div class="big-num">∞</div>
       <p>Enter a destination to begin</p>
-      <p style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--muted);">WADA SANZO · 348 COMBINATIONS</p>
     </div>
 
     <!-- Loading -->
@@ -614,7 +613,7 @@ footer {
       </div>
 
       <div class="combos-section">
-        <div class="section-title">Wada Sanzo combinations</div>
+        <div class="section-title">Some combinations for you</div>
         <div class="combos-pills" id="combos"></div>
       </div>
 
@@ -641,24 +640,24 @@ footer {
   <div class="how-step">
     <div class="how-num">01</div>
     <div class="how-title">Enter your destination & month</div>
-    <p class="how-body">Tell us where you're headed and when. The landscape of Seoul in January is completely different to Seoul in October — so the palette is too.</p>
+    <p class="how-body">Tell us where you're headed and when.</p>
   </div>
   <div class="how-step">
     <div class="how-num">02</div>
-    <div class="how-title">We read the seasonal backdrop</div>
-    <p class="how-body">We analyse the dominant visual colours of your destination that month — sky, terrain, architecture, nature — and use them as the canvas for your palette.</p>
+    <div class="how-title">We read the colours of the destination</div>
+    <p class="how-body">We analyse the dominant visual colours of your destination that month: sky, view, architecture, nature, and use them as the canvas for your palette.</p>
   </div>
   <div class="how-step">
     <div class="how-num">03</div>
-    <div class="how-title">Wada Sanzo chooses your colours</div>
-    <p class="how-body">Outfit colours are drawn from Sanzo Wada's <em>Dictionary of Color Combinations</em> — a 1930s Japanese colour masterwork of 348 curated harmonies that still holds up beautifully.</p>
+    <div class="how-title">We chooses your colours</div>
+    <p class="how-body">Outfit colours are suggested by numerous colour combinations sources</p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Palette <span>Voyage</span></div>
-  <div class="footer-credit">Colour harmonies · Wada Sanzo · A Dictionary of Color Combinations · 1930s</div>
+  <div class="footer-logo">Joy of <span>Packing</span></div>
+  <div class="footer-credit">Colour harmonies</div>
 </footer>
 
 <div class="toast-bar" id="toast">Link copied to clipboard</div>
@@ -849,16 +848,6 @@ function copyLink(){
   navigator.clipboard.writeText(`https://palettevoyage.com/?city=${encodeURIComponent(city)}&month=${sm}&vibe=${vl}`).then(()=>{
     const t=document.getElementById('toast'); t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2200);
   });
-}
-
-function igCaption(){
-  const city=document.getElementById('r-city').textContent;
-  alert(`Copy this to Claude:\n\nWrite an Instagram story caption for someone visiting ${city} in ${MN[sm]}, wearing a colour-coordinated outfit inspired by Wada Sanzo.`);
-}
-
-function pinterestShare(){
-  const city=document.getElementById('r-city').textContent;
-  window.open(`https://pinterest.com/pin/create/button/?description=Outfit+colour+palette+for+${encodeURIComponent(city)}+in+${MN[sm]}+%E2%80%94+via+Palette+Voyage`,'_blank');
 }
 
 document.getElementById('ci').addEventListener('keydown', e=>{ if(e.key==='Enter') go(); });
